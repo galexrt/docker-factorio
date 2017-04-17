@@ -16,7 +16,7 @@ RUN addgroup --gid $GROUP_ID factorio && \
 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu && \
 	rm -r "$GNUPGHOME" /usr/local/bin/gosu.asc && \
 	chmod +x /usr/local/bin/gosu && \
-    mkdir -p /data /config /factorio && \
+    mkdir -p /data /config /factorio /factorio/temp && \
     wget -q -O - https://www.factorio.com/download-headless/stable | \
     grep -o -m1 "/get-download/.*/headless/linux64" | \
     awk '{print "https://www.factorio.com"$1" -q -O /tmp/factorio.tar.gz"}' | \
