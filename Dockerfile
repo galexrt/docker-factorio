@@ -3,8 +3,8 @@ MAINTAINER Alexander Trost <galexrt@googlemail.com>
 
 ENV USER_ID=3000 GROUP_ID=3000
 
-RUN addgroup -g $GROUP_ID factorio && \
-    adduser -D -u $USER_ID -G factorio -d /factorio factorio && \
+RUN addgroup --gid $GROUP_ID factorio && \
+    useradd --uid $USER_ID --gid $GROUP_ID --no-create-home -d /factorio factorio && \
     apt-get -q update && \
     apt-get upgrade -y && \
     apt-get install -y wget && \
