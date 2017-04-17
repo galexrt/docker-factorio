@@ -21,7 +21,7 @@ RUN addgroup --gid $GROUP_ID factorio && \
     grep -o -m1 "/get-download/.*/headless/linux64" | \
     awk '{print "https://www.factorio.com"$1" -q -O /tmp/factorio.tar.gz"}' | \
     xargs wget && \
-    chown factorio:factorio /factorio && \
+    chown factorio:factorio -R /factorio && \
     tar -xzf /tmp/factorio.tar.gz -C /factorio --strip-components=1 && \
     rm -f /tmp/factorio.tar.gz && \
     rm -rf /var/lib/apt/lists/*
