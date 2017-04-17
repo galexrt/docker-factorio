@@ -34,4 +34,3 @@ VOLUME ["/data", "/config"]
 EXPOSE 34197/udp
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/factorio/bin/x64/factorio", "--start-server", "save"]
