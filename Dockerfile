@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Alexander Trost <galexrt@googlemail.com>
+LABEL maintainer="Alexander Trost <galexrt@googlemail.com>"
 
 ENV USER_ID=3000 GROUP_ID=3000 GOSU_VERSION=1.10
 
